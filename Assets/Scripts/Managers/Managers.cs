@@ -18,6 +18,7 @@ public class Managers : MonoBehaviour
     private SceneManagerEx _scene = new SceneManagerEx();
     private SoundManager _sound = new SoundManager();
     private UIManager _ui = new UIManager();
+    private NetworkManager _network = new NetworkManager();
 
     public static DataManager Data => Instance._data;
     public static InputManager Input => Instance._input;
@@ -26,6 +27,7 @@ public class Managers : MonoBehaviour
     public static SceneManagerEx Scene => Instance._scene;
     public static SoundManager Sound => Instance._sound;
     public static UIManager UI => s_instance._ui;
+    public static NetworkManager Network => Instance._network;
     
     void Start()
     {
@@ -60,6 +62,8 @@ public class Managers : MonoBehaviour
         s_instance._data.Init();
         s_instance._pool.Init();
         s_instance._sound.Init();
+        s_instance._network.Init();
+        // Network Manager
     }
 
     /// <summary>
