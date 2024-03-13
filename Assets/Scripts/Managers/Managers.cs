@@ -17,7 +17,7 @@ public class Managers : MonoBehaviour
     private ResourceManger _resource = new ResourceManger();
     private SceneManagerEx _scene = new SceneManagerEx();
     private SoundManager _sound = new SoundManager();
-    private UIManager _ui = new UIManager();
+    private LobbyUIManager _ui = new LobbyUIManager();
 
     public static DataManager Data => Instance._data;
     public static InputManager Input => Instance._input;
@@ -25,7 +25,7 @@ public class Managers : MonoBehaviour
     public static ResourceManger Resource => Instance._resource;
     public static SceneManagerEx Scene => Instance._scene;
     public static SoundManager Sound => Instance._sound;
-    public static UIManager UI => s_instance._ui;
+    public static LobbyUIManager UI => s_instance._ui;
     
     void Start()
     {
@@ -57,7 +57,7 @@ public class Managers : MonoBehaviour
         
         // 여기 안에서는 Instance를 호출하면 Infinite Loop에 걸리기 때문에, 호출 금지.
         
-        s_instance._data.Init();
+        //s_instance._data.Init();
         s_instance._pool.Init();
         s_instance._sound.Init();
     }
